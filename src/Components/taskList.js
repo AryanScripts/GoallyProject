@@ -8,7 +8,7 @@ import { useSwipeable } from 'react-swipeable';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import CircularProgress from '@mui/material/CircularProgress';
-import SearchContainer from './Search'; // Import the new SearchContainer component
+import SearchContainer from './Search'; 
 
 // API Configuration
 const API_URL = 'https://devapi.getgoally.com/v1/api/reminders/all';
@@ -119,11 +119,11 @@ const SwipeableTaskItem = ({ task, style, onDelete }) => {
 };
 
 const TaskList = () => {
-  // State Variables
+ 
   const [tasks, setTasks] = useState([]);
   const [deletedTaskIds, setDeletedTaskIds] = useState(new Set());
   const [page, setPage] = useState(1);
-  const [limit] = useState(50); // Number of tasks per page
+  const [limit] = useState(50); 
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -145,7 +145,7 @@ const TaskList = () => {
         },
       });
 
-      const fetchedTasks = response.data.docs; // Adjust based on actual API response
+      const fetchedTasks = response.data.docs; 
 
       if (fetchedTasks.length < limit) {
         setHasMore(false);
@@ -224,13 +224,13 @@ const TaskList = () => {
   return (
     <Container>
       <Header>
-        <SearchContainer setSearchTerm={setSearchTerm} /> {/* Replace SearchInput with SearchContainer */}
+        <SearchContainer setSearchTerm={setSearchTerm} /> 
       </Header>
 
       <List
-        height={600} // Adjust based on your layout
+        height={600} 
         itemCount={filteredTasks.length}
-        itemSize={80} // Height of each TaskItemWrapper
+        itemSize={80} 
         width={'100%'}
         onScroll={handleScroll}
         ref={listRef}
