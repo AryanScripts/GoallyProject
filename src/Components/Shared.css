@@ -1,0 +1,32 @@
+/* C:\Users\Developer\Desktop\Greeks Force\mobileproject\src\Components\Shared.css */
+.custom-nav {
+  background-color: #182545;
+}
+
+.routine-label {
+  margin-top: 20px;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.card_img {
+  padding: 16px;
+    /* border-radius: 2rem; */
+    /* width: 100% !important; */
+    height: 100%;
+
+}
+
+.task-list-img {
+  border: 3px solid #49b0ab;
+  border-radius: 4px;
+}
+
+.task-list-content{
+    text-align: left;
+    padding-left: 6px;
+}
